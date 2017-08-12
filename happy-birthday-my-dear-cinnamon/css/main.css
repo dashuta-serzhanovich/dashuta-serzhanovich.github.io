@@ -3732,19 +3732,23 @@ section.active {
     -webkit-filter: blur(5px);
     filter: blur(5px); }
   #sunday-4 .clarify {
+    max-width: 650px;
     position: relative; }
-    #sunday-4 .clarify p {
-      position: relative;
+    #sunday-4 .clarify p:first-child {
+      display: block; }
+    #sunday-4 .clarify p:last-child {
       display: inline; }
-      #sunday-4 .clarify p:before {
-        content: '';
-        position: absolute;
-        bottom: -18px;
-        right: -50px;
-        width: 40px;
-        height: 40px;
-        background: url(../img/kiss.png) center no-repeat;
-        background-size: contain; }
+      #sunday-4 .clarify p:last-child span {
+        position: relative; }
+        #sunday-4 .clarify p:last-child span:before {
+          content: '';
+          position: absolute;
+          bottom: -18px;
+          right: -50px;
+          width: 40px;
+          height: 40px;
+          background: url(../img/kiss.png) center no-repeat;
+          background-size: contain; }
 
 #gallery {
   text-align: left;

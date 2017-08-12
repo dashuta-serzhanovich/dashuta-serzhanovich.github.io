@@ -268,19 +268,23 @@ section.active
 		width: 300px
 		filter: blur(5px)
 	.clarify
+		max-width: 650px
 		position: relative
-		p
-			position: relative
+		p:first-child
+			display: block
+		p:last-child
 			display: inline
-			&:before
-				content: ''
-				position: absolute
-				bottom: -18px
-				right: -50px
-				width: 40px
-				height: 40px
-				background: url(../img/kiss.png) center no-repeat
-				background-size: contain
+			span
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					bottom: -18px
+					right: -50px
+					width: 40px
+					height: 40px
+					background: url(../img/kiss.png) center no-repeat
+					background-size: contain
 
 #gallery
 	text-align: left
