@@ -3681,15 +3681,18 @@ section.active {
     filter: blur(5px); }
   #sunday-4 .clarify {
     position: relative; }
-    #sunday-4 .clarify:before {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      right: -55px;
-      width: 50px;
-      height: 50px;
-      background: url(../img/kiss.png) center no-repeat;
-      background-size: contain; }
+    #sunday-4 .clarify p {
+      position: relative;
+      display: inline; }
+      #sunday-4 .clarify p:before {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        right: -55px;
+        width: 50px;
+        height: 50px;
+        background: url(../img/kiss.png) center no-repeat;
+        background-size: contain; }
 
 #gallery {
   text-align: left;
@@ -3699,6 +3702,8 @@ section.active {
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite; }
+  #gallery .fa {
+    color: #333; }
   #gallery .gallery {
     position: relative; }
   #gallery .grid {

@@ -22,4 +22,5 @@ document.addEventListener('DOMContentLoaded', function(){
 		image.crossOrigin = 'anonymous';
 		image.src = 'http://i.imgur.com/N7ETzFO.jpg';
 	}
+	console.meme("Мне кажется или ты всё ещё не закрыл дев тулз?", ". . .", "Not Sure Fry", 400, 300);
 });
