@@ -10,6 +10,24 @@ body
 	font: 300 21px/1.3em 'Raleway', sans-serif
 	cursor: default
 
+.fa-chevron-down,
+.fa-chevron-up
+	position: absolute
+	left: 50%
+	margin-left: -10px
+	color: #fff
+	transition: .1s
+	cursor: pointer
+	z-index: 2
+.fa-chevron-down
+	bottom: 35px
+	&:hover
+		animation: bounce-down .5s ease both
+.fa-chevron-up
+	top: 35px
+	&:hover
+		animation: bounce-up .5s ease both
+
 h1,
 h2
 	text-align: center
@@ -106,6 +124,8 @@ section.active
 		content: url(../img/castle.png)
 	&:after
 		content: url(../img/association-2.png)
+	.fa
+		color: #333
 	h2
 		font-size: 48px
 		&:before
@@ -131,6 +151,8 @@ section.active
 	color: #fff
 	background: url(../img/fountain.png) center no-repeat, radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%)
 	background-color: #7d82c5
+	.fa
+		z-index: 2
 	&:before
 		content: url(../img/lodka.png)
 		margin-top: -150px
@@ -282,6 +304,30 @@ section.active
 	.grid__item--title
 		color: #333
 
+@keyframes bounce-down
+	0%
+		transform: translateY(0)
+	25%
+		transform: translateY(5px)
+	50%
+		transform: translateY(0)
+	75%
+		transform: translateY(5px)
+	100%
+		transform: translateY(0)
+
+@keyframes bounce-up
+	0%
+		transform: translateY(0)
+	25%
+		transform: translateY(-5px)
+	50%
+		transform: translateY(0)
+	75%
+		transform: translateY(-5px)
+	100%
+		transform: translateY(0)
+
 @keyframes Gradient
 	0%
 		background-position: 0% 50%
@@ -334,6 +380,10 @@ section.active
 			margin-right: -600px
 
 @media only screen and (max-width: 1200px)
+	.fa-chevron-down
+		bottom: 20px
+	.fa-chevron-up
+		top: 20px
 	#sunday-1
 		&:before
 			transform: scale(.7)

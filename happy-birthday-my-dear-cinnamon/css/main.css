@@ -3447,6 +3447,30 @@ body {
   font: 300 21px/1.3em 'Raleway', sans-serif;
   cursor: default; }
 
+.fa-chevron-down,
+.fa-chevron-up {
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  color: #fff;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  cursor: pointer;
+  z-index: 2; }
+
+.fa-chevron-down {
+  bottom: 35px; }
+  .fa-chevron-down:hover {
+    -webkit-animation: bounce-down .5s ease both;
+    animation: bounce-down .5s ease both; }
+
+.fa-chevron-up {
+  top: 35px; }
+  .fa-chevron-up:hover {
+    -webkit-animation: bounce-up .5s ease both;
+    animation: bounce-up .5s ease both; }
+
 h1,
 h2 {
   text-align: center;
@@ -3552,6 +3576,8 @@ section.active {
     content: url(../img/castle.png); }
   #sunday-2:after {
     content: url(../img/association-2.png); }
+  #sunday-2 .fa {
+    color: #333; }
   #sunday-2 h2 {
     font-size: 48px; }
     #sunday-2 h2:before {
@@ -3580,6 +3606,8 @@ section.active {
   background: url(../img/fountain.png) center no-repeat, -o-radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%);
   background: url(../img/fountain.png) center no-repeat, radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%);
   background-color: #7d82c5; }
+  #sunday-3 .fa {
+    z-index: 2; }
   #sunday-3:before {
     content: url(../img/lodka.png);
     margin-top: -150px; }
@@ -3743,6 +3771,74 @@ section.active {
   #gallery .grid__item--title {
     color: #333; }
 
+@-webkit-keyframes bounce-down {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  25% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes bounce-down {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  25% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes bounce-up {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes bounce-up {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%; }
@@ -3801,6 +3897,10 @@ section.active {
     margin-right: -600px; } }
 
 @media only screen and (max-width: 1200px) {
+  .fa-chevron-down {
+    bottom: 20px; }
+  .fa-chevron-up {
+    top: 20px; }
   #sunday-1:before {
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);

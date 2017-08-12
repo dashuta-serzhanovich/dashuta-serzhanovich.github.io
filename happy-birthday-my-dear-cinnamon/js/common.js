@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', function(){
-	$('#fullpage').fullpage();
+	$('#fullpage').fullpage({
+		controlArrows: true
+	});
+
+	$('.fa-chevron-up').click(function(){
+		$.fn.fullpage.moveSectionUp();
+	});
+	$('.fa-chevron-down').click(function(){
+		$.fn.fullpage.moveSectionDown();
+	});
 
 	function run() {
 		var image = document.getElementById('background');
