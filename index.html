@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Небольшой свод правил для полноценной и счастливой жизни!</title><link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div id="fullpage">
+      <section class="section" id="sunday-1">
+        <div class="content">
+          <h1>Соглашайся</h1>
+          <div class="clarify">
+            <p>Как правило, решиться на какие-то непривычные для себя вещи довольно тяжело, даже несмотря на действие вкуснейшего глинтвейна. Особенно когда нужно кричать, что ты петух с высоты птичьего полёта... Однако эти вещи зачастую </p>
+            <p>
+              <u>оборачиваются для тебя как нельзя лучше.</u>
+            </p>
+          </div>
+          <div class="num">
+            <p>01</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sunday-2">
+        <div class="content">
+          <h2>Умей отдыхать правильно</h2>
+          <div class="clarify">
+            <p>У каждого из нас, бывает, наступает момент когда всё надоело и хочется непонятно чего. То ли всё бросить, то ли купить бухлишка и нажраться - это всё не то! 
+              <u>Что действительно нужно в такие моменты это поддержка, и правильный отдых. </u>Под правильным отдыхом я имею ввиду времяпровождение с самыми родными и дорогими тебе людьми. С ними время летит незаметно и плохое настроение отступает само собой.
+            </p>
+          </div>
+          <div class="num">
+            <p>02</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sunday-3">
+        <div class="drops"></div>
+        <div class="content">
+          <h2>Не отступай</h2>
+          <div class="clarify">
+            <p>Сначала кажется, что всё будет в порядке. Затем волнение. Тревога. Паника. Крики. Смирение. Счастье. Ради всего этого спектра эмоций мы и живём. Чтобы их испытать необходимо проявить </p>
+            <p>
+              <u>выдержку и силу воли.</u>
+            </p>
+          </div>
+          <div class="num">
+            <p>03</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sunday-4">
+        <div class="overlay"></div>
+        <div class="cover-1 cover"><img src="img/cover-1.jpg" alt=""/></div>
+        <div class="cover-2 cover"><img src="img/cover-2.jpg" alt=""/></div>
+        <div class="content">
+          <h2>Не важно где - Главное с кем</h2>
+          <div class="clarify">
+            <p>Пусть сонные, пусть уставшие и плохо соображающие, но зато близкие, очень счастливые и с упаковкой мармелада.</p>
+          </div>
+        </div>
+        <div class="num">
+          <p>04</p>
+        </div>
+      </section>
+      <section class="section" id="gallery">
+        <div class="grid grid--layout-1 grid--current">
+          <div class="grid__item" data-delay="150" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="300" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="200" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="40" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="70" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="100" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="250" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="350" data-direction="ttb"></div>
+          <div class="grid__item" data-delay="400" data-direction="ttb"></div>
+          <div class="grid__item" data-direction="ttb"></div>
+          <div class="grid__item" data-direction="ttb" data-delay="20"></div>
+          <div class="grid__item" data-direction="ttb" data-delay="500"></div>
+          <div class="grid__item" data-delay="120" data-direction="ttb"></div>
+          <div class="grid__item grid__item--nav grid__item--nav-prev" data-direction="ttb">
+            <svg class="icon icon--nav-arrow">
+              <use xlink:href="#icon-nav-arrow"></use>
+            </svg>
+          </div>
+          <div class="grid__item grid__item--nav grid__item--nav-next" data-direction="ttb">
+            <svg class="icon icon--nav-arrow">
+              <use xlink:href="#icon-nav-arrow"></use>
+            </svg>
+          </div>
+          <h3 class="grid__item grid__item--title">Cinnamon</h3>
+          <p class="grid__item grid__item--text">Самое интересное ещё впереди</p>
+        </div>
+      </section>
+    </div>
+    <script src="js/libs.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+      {
+      	const DOM = {};
+      	DOM.body = document.body;
+      	DOM.gridElems = Array.from(document.querySelectorAll('.grid'));
+      	
+      	imagesLoaded(DOM.body, {background: true} , () => {
+      		DOM.body.classList.remove('loading');
+      		new Slideshow(DOM.gridElems, {
+      			hasTilt: true,
+      			tilt: {maxTranslationX: 25, maxTranslationY: 25}
+      		});
+      	});
+      }
+    </script>
+  </body>
+</html>
