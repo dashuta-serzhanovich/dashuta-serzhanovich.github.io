@@ -5,7 +5,7 @@ html(lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title Небольшой свод правил для полноценной и счастливой жизни!
-		<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+		link(rel="shortcut icon" href="img/favicon.png" type="image/png")
 		link(rel="stylesheet", href="css/main.css")
 	//
 	//
@@ -85,6 +85,14 @@ html(lang="en")
 							use(xlink:href='#icon-nav-arrow')
 					h3.grid__item.grid__item--title Cinnamon
 					p.grid__item.grid__item--text Самое интересное ещё впереди
+
+		script.
+			var ww = window.innerWidth;
+			if(ww < 992){
+				var body = document.getElementsByTagName('body');
+				console.log(body);
+				body[0].innerHTML = '<div class="mobile-device"><div class="wrap"><p>Ваш девайс ДНО.</p><p>Ради всего святого зайдите на этот сайт с нормального компа!</p><p class="ps">P.S. Благодарю за непонимание</p></div></div>';
+			}
 
 		script(src="js/libs.js")
 		script(src="js/common.js")

@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Небольшой свод правил для полноценной и счастливой жизни!</title><link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>Небольшой свод правил для полноценной и счастливой жизни!</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <!---->
@@ -100,6 +101,15 @@
         </div>
       </section>
     </div>
+    <script>
+      var ww = window.innerWidth;
+      if(ww < 992){
+      	var body = document.getElementsByTagName('body');
+      	console.log(body);
+      	body[0].innerHTML = '<div class="mobile-device"><div class="wrap"><p>Ваш девайс ДНО.</p><p>Ради всего святого зайдите на этот сайт с нормального компа!</p><p class="ps">P.S. Благодарю за непонимание</p></div></div>';
+      }
+      
+    </script>
     <script src="js/libs.js"></script>
     <script src="js/common.js"></script>
     <script>

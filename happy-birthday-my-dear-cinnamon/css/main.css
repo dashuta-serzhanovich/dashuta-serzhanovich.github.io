@@ -3447,6 +3447,30 @@ body {
   font: 300 21px/1.3em 'Raleway', sans-serif;
   cursor: default; }
 
+.mobile-device {
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center; }
+  .mobile-device .wrap {
+    line-height: 1.4em;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+    position: relative; }
+  .mobile-device .ps {
+    padding: 0 10px;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: right;
+    text-transform: none;
+    font-weight: 300; }
+
 .fa-chevron-down,
 .fa-chevron-up {
   position: absolute;
@@ -3943,3 +3967,7 @@ section.active {
     font-size: 58px; }
     #sunday-4 h2:after {
       margin-bottom: -15px; } }
+
+@media only screen and (max-width: 991px) {
+  body {
+    min-height: initial; } }

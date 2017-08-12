@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
-	$('#fullpage').fullpage({
-		controlArrows: true
-	});
+	
+	if($(window).width() >= 992) {
+		$('#fullpage').fullpage({
+			controlArrows: true
+		});
+	}
 
 	$('.fa-chevron-up').click(function(){
 		$.fn.fullpage.moveSectionUp();
