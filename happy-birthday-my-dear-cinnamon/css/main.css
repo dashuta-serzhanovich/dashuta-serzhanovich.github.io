@@ -3591,6 +3591,19 @@ section.active {
       margin-top: 20px;
       right: 0;
       font-size: 14px; }
+  #sunday-1 .smiley-disturb {
+    position: relative;
+    display: inline; }
+    #sunday-1 .smiley-disturb:before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 100%;
+      margin-left: 10px;
+      width: 30px;
+      height: 30px;
+      background: url(../img/smiley-disturb.png) center no-repeat;
+      background-size: cover; }
 
 #sunday-2 {
   background: #ffe874 -webkit-radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%);
