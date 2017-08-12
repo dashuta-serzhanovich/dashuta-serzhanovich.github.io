@@ -64,6 +64,12 @@ table {
   font-weight: 300;
   src: url("../fonts/Montserrat/Montserrat-Black/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Black/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Black/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Black/Montserrat-Black.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf") format("truetype"); }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3450,7 +3456,15 @@ body {
 .mobile-device {
   height: 100vh;
   line-height: 100vh;
-  text-align: center; }
+  text-align: center;
+  font-weight: 400;
+  font-family: 'PlayfairDisplay'; }
+  .mobile-device .caption {
+    line-height: 1em;
+    color: red;
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-transform: none; }
   .mobile-device .wrap {
     line-height: 1.4em;
     display: inline-block;
@@ -3465,6 +3479,7 @@ body {
     width: 100%;
     top: 100%;
     right: 0;
+    font-style: italic;
     margin-top: 20px;
     font-size: 14px;
     text-align: right;
@@ -3547,7 +3562,7 @@ section {
     top: 50%;
     margin-top: -250px; }
   section .clarify {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     color: #fff;
     text-align: center; }
@@ -3590,27 +3605,27 @@ section.active {
       top: 100%;
       margin-top: 20px;
       right: 0;
-      font-size: 14px; }
+      font-size: 14px;
+      font-style: italic; }
   #sunday-1 .smiley-disturb {
     position: relative;
     display: inline; }
     #sunday-1 .smiley-disturb:before {
-      content: '';
+      content: url(../img/smiley-disturb.png);
       position: absolute;
       bottom: -5px;
       left: 100%;
       margin-left: 10px;
       width: 30px;
-      height: 30px;
-      background: url(../img/smiley-disturb.png) center no-repeat;
-      background-size: cover; }
+      height: 30px; }
 
 #sunday-2 {
   background: #ffe874 -webkit-radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%);
   background: #ffe874 -o-radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%);
   background: #ffe874 radial-gradient(circle 1898px at 48% 51%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.07) 19%, rgba(52, 52, 52, 0.07) 100%); }
   #sunday-2:before {
-    content: url(../img/castle.png); }
+    content: url(../img/castle.png);
+    left: -50px; }
   #sunday-2:after {
     content: url(../img/association-2.png); }
   #sunday-2 .fa {
@@ -3724,10 +3739,10 @@ section.active {
       #sunday-4 .clarify p:before {
         content: '';
         position: absolute;
-        bottom: -15px;
-        right: -55px;
-        width: 50px;
-        height: 50px;
+        bottom: -18px;
+        right: -50px;
+        width: 40px;
+        height: 40px;
         background: url(../img/kiss.png) center no-repeat;
         background-size: contain; }
 
@@ -3914,10 +3929,18 @@ section.active {
     margin-top: -150px;
     right: 50%;
     margin-right: -600px; }
+  #sunday-1 .smiley-disturb {
+    margin-right: 40px; }
+    #sunday-1 .smiley-disturb:before {
+      margin-left: 5px; }
   #sunday-1 .num {
     right: 0; }
   #sunday-2:before {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
     left: 50%;
+    margin-top: -210px;
     margin-left: -700px; }
   #sunday-2:after {
     right: 50%;
@@ -3938,7 +3961,7 @@ section.active {
     margin-top: -100px;
     margin-right: -600px; } }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .fa-chevron-down {
     bottom: 20px; }
   .fa-chevron-up {
