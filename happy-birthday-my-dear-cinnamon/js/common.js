@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', function(){
 			var minutesRemaining =  59 - start.getMinutes();
 			var secondsRemaining =  59 - start.getSeconds();
 			var daysRemainingText;
+			var hoursRemainingText;
+
+			switch(hoursRemaining){
+				case 21:
+				case 1: daysRemainingText = 'час'; break;
+				case 3:
+				case 4:
+				case 22:
+				case 23:
+				case 2: daysRemainingText = 'часа'; break;
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+				case 11:
+				case 12:
+				case 13:
+				case 14:
+				case 15:
+				case 16:
+				case 17:
+				case 18:
+				case 19:
+				case 20:
+				case 5: daysRemainingText = 'часов'; break;
+			}
 
 			switch(daysRemaining){
 				case 31:
@@ -84,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				secondsRemaining = '0' + secondsRemaining;
 			}
 
-			var string = daysRemaining + ' ' + daysRemainingText + ' - ' + hoursRemaining + ' часов ' + minutesRemaining + ' мин. - ' + secondsRemaining + ' сек.';
+			var string = daysRemaining + ' ' + daysRemainingText + ' - ' + hoursRemaining + ' ' + hoursRemainingText + ' ' + minutesRemaining + ' мин. - ' + secondsRemaining + ' сек.';
 			console.log(string);
 			
 
