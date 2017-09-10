@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			switch(hoursRemaining){
 				case 21:
-				case 1: daysRemainingText = 'час'; break;
+				case 1: hoursRemainingText = 'час'; break;
 				case 3:
 				case 4:
 				case 22:
 				case 23:
-				case 2: daysRemainingText = 'часа'; break;
+				case 2: hoursRemainingText = 'часа'; break;
 				case 6:
 				case 7:
 				case 8:
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				case 18:
 				case 19:
 				case 20:
-				case 5: daysRemainingText = 'часов'; break;
+				case 5: hoursRemainingText = 'часов'; break;
 			}
 
 			switch(daysRemaining){
