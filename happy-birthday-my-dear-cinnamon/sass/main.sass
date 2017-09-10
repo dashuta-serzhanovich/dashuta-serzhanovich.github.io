@@ -314,19 +314,35 @@ section.active
 		height: 100px
 		width: 200px
 		&:before
-			content: '. . .'
+			content: attr(data-text)
 			position: absolute
-			top: 50%
-			margin-top: -55px
-			line-height: 1em
+			top: 0
 			color: #000
+			line-height: 1.3em
 			left: 0
+			padding: 25px 10px 0
 			width: 100%
-			font-size: 71px
+			font-size: 19px
 			border-radius: 50%
 			font-weight: 700
 			word-spacing: .1
 			text-align: center
+			height: 100%
+			z-index: 1
+		&:after
+			content: 'Тик тик тик:'
+			font-size: 12px
+			padding-left: 20px
+			color: #000
+			font-weight: 700
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 0
+			left: 0
+			background: url(../img/plane.png) center no-repeat
+			background-size: 75px
+			opacity: .3
 	.grid__item.grid__item--nav-prev
 		filter: none
 		position: relative
@@ -341,18 +357,19 @@ section.active
 			height: 100%
 			top: 0
 			left: 0
-			z-index: 1
+			background: url(../img/plane.png) 13px 10px no-repeat
+			background-size: 30px
 		&:before
-			content: 'С днём рождения, Родная!'
+			content: attr(data-text)
 			text-transform: uppercase
 			font-weight: 700
+			z-index: 1
 			position: absolute
 			height: 100%
-			top: 100%
 			top: 0
 			left: 0
 			text-align: right
-			padding: 10px 20px
+			padding: 10px 20px 10px 5px
 	.grid__item--text
 		color: #fff
 	.grid__item--title
